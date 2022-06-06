@@ -35,13 +35,7 @@ void processPriority(int n, int process_num[], int arrival_time[], int burst_tim
     float avtat=0, avwt=0;
  
 
-     printf("\nGantt Chart\n");
-    if(arrival_time[0]!=0){   
-        for(int j=0;j<arrival_time[0];j++){
-            printf("-");            
-        }
-        time=arrival_time[0];
-    }
+     printf("\nGantt Chart\n"); 
 
 
     for (time; count != n; time++)

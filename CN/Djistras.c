@@ -27,7 +27,7 @@ void main()
     int cost[9][9] = {{0, 4, 50, 50, 50, 50, 50, 8, 50}, {4, 0, 8, 50, 50, 50, 50, 11, 50}, {50, 8, 0, 7, 50, 4, 50, 8, 2}, {50, 50, 7, 0, 9, 14, 50, 50, 50}, {50, 50, 50, 9, 0, 10, 50, 50, 50}, {50, 50, 4, 14, 10, 0, 2, 50, 50}, {50, 50, 50, 50, 50, 2, 0, 1, 6}, {8, 11, 50, 50, 50, 50, 1, 0, 7}, {50, 50, 2, 50, 50, 50, 6, 7, 0}};
     
     int D[9] = {50, 50, 50, 50, 50, 50, 50, 50, 50};
-    int V[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int V[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
      
     printf("\nEnter source node: ");
     scanf("%d", &p);
@@ -43,9 +43,9 @@ void main()
             {
                 D[i] = check;
             }
-            // printf(" %d\n", D[i]);
+            printf(" %d", D[i]);
         }
-        // printf("\n");
+        printf("\n");
         V[p] = 1;
         min = 50;
         for (int i = 0; i < n; i++)
@@ -59,10 +59,9 @@ void main()
  
     }
 
-    printf("The Shortest Route using Dijstra's algo is : ");
-
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", D[i]);
-    }
+    printf("\nThe shortest distance from source vertex\n");
+	printf("Vertex\t\tDistance\n");
+	for(int i=0;i<n;i++){  
+		printf("%d\t\t%d\n",i,D[i]);
+	}
 }

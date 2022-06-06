@@ -4,7 +4,7 @@
 int hamming_calculate(int position, int length,int code[])
 {
     int count = 0; 
-    int i,j,k;
+    int i,j;
     i = position - 1;
 
     while(i<length){
@@ -69,8 +69,7 @@ int main()
     
     for(int i=0;i<n;i++){
         printf("Enter the value of bit %d : ",i+1); 
-        scanf("%d",&input[i]);
-        printf("\n");
+        scanf("%d",&input[i]); 
     }
 
     int j = 0,k =n-1;

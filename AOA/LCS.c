@@ -13,7 +13,7 @@ int main()
    
     int n=strlen(st1),m=strlen(st2);
     int min=n;
-    
+
     if(n>=m){
         min=m;
     } 
@@ -57,8 +57,9 @@ int main()
     int z=0,x=n-1,y=m-1; 
    
    
-    while(x>0){
+    while(x>=0 && y>=0){
         if(arr[x][y]==1){
+            printf("\n z%d x%d y%d\n",z,x,y);
            lcs[z]=st1[x]; 
             z++;
             x=x-1;
